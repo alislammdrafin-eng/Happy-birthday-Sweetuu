@@ -1,0 +1,1614 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, My Queen DIA ❤️</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Great Vibes, Playfair Display, Cormorant Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: {
+                            bg: '#160812',
+                            plum: '#240c1d',
+                            burgundy: '#381228',
+                            card: '#2a0f21',
+                            gold: '#e6c27a',
+                            goldLight: '#f8e3b4',
+                            goldDark: '#b88b3a',
+                            rose: '#e899a8',
+                            roseDeep: '#c85a72',
+                            cream: '#fdf8f0',
+                            parchment: '#fbf4e6'
+                        }
+                    },
+                    fontFamily: {
+                        script: ['"Great Vibes"', 'cursive'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        body: ['"Cormorant Garamond"', 'Georgia', 'serif']
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px rgba(230, 194, 122, 0.35)',
+                        'gold-soft': '0 10px 35px rgba(0, 0, 0, 0.55), 0 0 15px rgba(230, 194, 122, 0.2)',
+                        'rose-glow': '0 0 25px rgba(232, 153, 168, 0.4)'
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        :root {
+            --gold: #e6c27a;
+            --gold-light: #f8e3b4;
+            --rose: #e899a8;
+            --plum: #160812;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 0%, #341026 0%, #1d0917 45%, #11050d 100%);
+            color: #fdf8f0;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #160812;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #b88b3a, #e6c27a);
+            border-radius: 999px;
+        }
+
+        /* Gold Shimmer Text */
+        .gold-shimmer {
+            background: linear-gradient(
+                110deg,
+                #c99d49 15%,
+                #fff3d1 35%,
+                #e6c27a 50%,
+                #fff3d1 65%,
+                #c99d49 85%
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 5s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* Royal Ornamental Border */
+        .royal-frame {
+            border: 1px solid rgba(230, 194, 122, 0.4);
+            box-shadow: inset 0 0 20px rgba(230, 194, 122, 0.08), 0 15px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+        .royal-frame::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 1px solid rgba(230, 194, 122, 0.22);
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        /* Floating & Bobbing Animations */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1.5deg); }
+        }
+        .animate-float-slow {
+            animation: floatSlow 4.5s ease-in-out infinite;
+        }
+
+        @keyframes balloonBob {
+            0%, 100% { transform: translateY(0px) rotate(-2deg); }
+            50% { transform: translateY(-16px) rotate(2.5deg); }
+        }
+        .balloon-bob {
+            animation: balloonBob var(--dur, 4s) ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+        /* Candle Flame Animation */
+        @keyframes flameFlicker {
+            0%, 100% { transform: scale(1) rotate(-2deg); opacity: 0.95; }
+            25% { transform: scale(1.08, 0.94) rotate(2deg); opacity: 1; }
+            50% { transform: scale(0.95, 1.07) rotate(-1deg); opacity: 0.92; }
+            75% { transform: scale(1.05, 0.96) rotate(3deg); opacity: 1; }
+        }
+        .candle-flame {
+            transform-origin: bottom center;
+            animation: flameFlicker 1.4s ease-in-out infinite;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .candle-flame.blown-out {
+            opacity: 0 !important;
+            transform: scale(0) !important;
+            animation: none;
+        }
+
+        /* Smoke Rising Animation */
+        @keyframes smokeRise {
+            0% {
+                opacity: 0.85;
+                transform: translateY(0) scale(0.6) translateX(0);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(-28px) scale(1.3) translateX(6px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-60px) scale(2) translateX(-5px);
+            }
+        }
+        .smoke-puff {
+            animation: smokeRise 2.2s ease-out forwards;
+        }
+
+        /* Cat Blinking & Paw Wave */
+        @keyframes catBlink {
+            0%, 92%, 100% { transform: scaleY(1); }
+            96% { transform: scaleY(0.1); }
+        }
+        .cat-eye {
+            transform-origin: center;
+            animation: catBlink 4s infinite;
+        }
+
+        @keyframes catTail {
+            0%, 100% { transform: rotate(-6deg); }
+            50% { transform: rotate(10deg); }
+        }
+        .cat-tail {
+            transform-origin: bottom left;
+            animation: catTail 2.8s ease-in-out infinite;
+        }
+
+        @keyframes pawWave {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-18deg); }
+        }
+        .cat-paw {
+            transform-origin: bottom center;
+            animation: pawWave 1.8s ease-in-out infinite;
+        }
+
+        /* Cake Slice Transition */
+        .cake-slice-piece {
+            transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
+        }
+        .cake-slice-piece.cut-out {
+            transform: translate(55px, 28px) rotate(6deg);
+        }
+
+        /* Wax Seal Envelope Transition */
+        .envelope-flap {
+            transform-origin: top center;
+            transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .envelope-open .envelope-flap {
+            transform: rotateX(180deg);
+        }
+
+        /* Heart Burst Particle */
+        @keyframes popHeart {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(0.4);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1.3) rotate(var(--rot));
+            }
+        }
+        .floating-burst {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            animation: popHeart 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Parchment Texture Effect */
+        .parchment-paper {
+            background-color: #fbf4e6;
+            background-image: 
+                radial-gradient(rgba(184, 139, 58, 0.12) 1px, transparent 0),
+                linear-gradient(180deg, rgba(255, 250, 240, 0.95) 0%, rgba(247, 235, 212, 0.96) 100%);
+            background-size: 24px 24px, 100% 100%;
+            color: #2b141e;
+        }
+
+        /* Fairy Light Twinkle */
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.35; transform: scale(0.85); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-royal-gold selection:text-royal-bg">
+
+    <!-- Ambient Background Particle Canvas (Gold Dust & Confetti) -->
+    <canvas id="ambientCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+    <canvas id="celebrationCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-50"></canvas>
+
+    <!-- Top Fairy Lights Garland -->
+    <div id="fairyLights" class="fixed top-0 left-0 right-0 h-8 pointer-events-none z-30 flex justify-around items-start overflow-hidden px-2"></div>
+
+    <!-- Floating Music & Quick Navigation Bar -->
+    <header class="fixed top-3 left-1/2 -translate-x-1/2 z-40 w-[95%] max-w-4xl">
+        <nav class="backdrop-blur-md bg-royal-plum/80 border border-royal-gold/35 rounded-full px-4 py-2.5 shadow-gold-soft flex items-center justify-between gap-2">
+            <a href="#welcome" class="font-script text-2xl sm:text-3xl text-royal-gold pl-1 hover:text-royal-goldLight transition">
+                Dia ❤️
+            </a>
+
+            <div class="hidden md:flex items-center gap-5 text-base font-medium tracking-wide text-royal-cream/90">
+                <a href="#balloons" class="hover:text-royal-gold transition">Balloons</a>
+                <a href="#cake-ceremony" class="hover:text-royal-gold transition">Chocolate Cake</a>
+                <a href="#love-dialogues" class="hover:text-royal-gold transition">Why I Love You</a>
+                <a href="#love-letter" class="hover:text-royal-gold transition">Love Letter</a>
+            </div>
+
+            <button id="musicToggleBtn" onclick="toggleRomanticMusic()" class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-royal-goldDark via-royal-gold to-royal-goldDark text-royal-bg font-serif font-semibold text-xs sm:text-sm shadow-md hover:brightness-110 active:scale-95 transition cursor-pointer">
+                <span id="musicIcon">🎵</span>
+                <span id="musicLabel">Play Romantic Melody</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 pt-24 pb-24 px-4 sm:px-6 max-w-5xl mx-auto space-y-24 sm:space-y-32">
+
+        <!-- ========================================================= -->
+        <!-- SECTION 1: GRAND ROYAL WELCOME & NICKNAME PETALS          -->
+        <!-- ========================================================= -->
+        <section id="welcome" class="min-h-[82vh] flex flex-col items-center justify-center text-center relative">
+            <div class="royal-frame rounded-3xl bg-royal-plum/70 backdrop-blur-md p-6 sm:p-12 md:p-14 w-full max-w-3xl relative overflow-visible">
+                
+                <!-- Cute Royal Kitty Peeking on Top Left Corner -->
+                <div class="absolute -top-12 left-4 sm:left-8 w-20 h-20 sm:w-24 sm:h-24 pointer-events-none select-none animate-float-slow" title="Birthday Kitty for Dia!">
+                    <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow-lg">
+                        <!-- Party Hat -->
+                        <polygon points="60,6 44,34 76,34" fill="#e6c27a" stroke="#b88b3a" stroke-width="2"/>
+                        <circle cx="60" cy="6" r="4.5" fill="#e899a8"/>
+                        <line x1="49" y1="24" x2="71" y2="24" stroke="#c85a72" stroke-width="2.5"/>
+                        <!-- Ears -->
+                        <polygon points="28,46 34,20 50,36" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                        <polygon points="33,42 36,26 46,36" fill="#f4b6c2"/>
+                        <polygon points="92,46 86,20 70,36" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                        <polygon points="87,42 84,26 74,36" fill="#f4b6c2"/>
+                        <!-- Head -->
+                        <ellipse cx="60" cy="62" rx="34" ry="28" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                        <!-- Blush -->
+                        <ellipse cx="39" cy="67" rx="6" ry="3.5" fill="#f4a4b4" opacity="0.7"/>
+                        <ellipse cx="81" cy="67" rx="6" ry="3.5" fill="#f4a4b4" opacity="0.7"/>
+                        <!-- Eyes -->
+                        <g class="cat-eye">
+                            <circle cx="46" cy="58" r="4" fill="#2b141e"/>
+                            <circle cx="47.5" cy="56.5" r="1.4" fill="#ffffff"/>
+                        </g>
+                        <g class="cat-eye">
+                            <circle cx="74" cy="58" r="4" fill="#2b141e"/>
+                            <circle cx="75.5" cy="56.5" r="1.4" fill="#ffffff"/>
+                        </g>
+                        <!-- Nose & Mouth -->
+                        <polygon points="57,64 63,64 60,68" fill="#e899a8"/>
+                        <path d="M54,70 Q57,74 60,69 Q63,74 66,70" fill="none" stroke="#2b141e" stroke-width="2" stroke-linecap="round"/>
+                        <!-- Whiskers -->
+                        <line x1="20" y1="60" x2="34" y2="62" stroke="#b88b3a" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="20" y1="67" x2="34" y2="66" stroke="#b88b3a" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="86" y1="62" x2="100" y2="60" stroke="#b88b3a" stroke-width="1.5" stroke-linecap="round"/>
+                        <line x1="86" y1="66" x2="100" y2="67" stroke="#b88b3a" stroke-width="1.5" stroke-linecap="round"/>
+                        <!-- Cute Paws Resting on Frame -->
+                        <ellipse cx="44" cy="90" rx="9" ry="6" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                        <ellipse cx="76" cy="90" rx="9" ry="6" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <!-- Crown Icon -->
+                <div class="flex justify-center mb-3">
+                    <svg class="w-12 h-12 sm:w-14 sm:h-14 text-royal-gold drop-shadow-md" viewBox="0 0 64 64" fill="currentColor">
+                        <path d="M8 46L4 18l16 12 12-18 12 18 16-12-4 28H8zm2 6h44v4H10v-4z"/>
+                        <circle cx="4" cy="15" r="3"/>
+                        <circle cx="32" cy="9" r="3.5"/>
+                        <circle cx="60" cy="15" r="3"/>
+                    </svg>
+                </div>
+
+                <p class="uppercase tracking-[0.28em] text-xs sm:text-sm text-royal-goldLight/90 font-serif mb-2">
+                    A Royal Celebration For The Love Of My Life
+                </p>
+
+                <h1 class="font-script text-5xl sm:text-7xl md:text-8xl gold-shimmer leading-tight py-2">
+                    Happy Birthday, DIA
+                </h1>
+
+                <p class="mt-3 text-lg sm:text-2xl text-royal-cream/90 italic max-w-xl mx-auto leading-relaxed">
+                    "To the girl who makes my world infinitely softer, brighter, and more beautiful every single day."
+                </p>
+
+                <!-- Interactive Nickname Pills -->
+                <div class="mt-8">
+                    <p class="text-xs sm:text-sm uppercase tracking-[0.2em] text-royal-rose mb-3">
+                        Tap each of your sweet names for a secret kiss & wish ✨
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3.5" id="nicknameContainer">
+                        <button onclick="triggerNicknameLove(event, 'Babe', 'You are my favorite hello and my hardest goodbye, Babe. ❤️')" class="px-5 py-2 rounded-full border border-royal-gold/60 bg-royal-burgundy/80 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif text-base sm:text-lg transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            ✨ Babe
+                        </button>
+                        <button onclick="triggerNicknameLove(event, 'Jantush', 'My heart skips a beat every single time you smile, Jantush! 🥰')" class="px-5 py-2 rounded-full border border-royal-gold/60 bg-royal-burgundy/80 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif text-base sm:text-lg transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            💖 Jantush
+                        </button>
+                        <button onclick="triggerNicknameLove(event, 'Shona', 'You are more precious to me than all the gold in the world, Shona. ✨')" class="px-5 py-2 rounded-full border border-royal-gold/60 bg-royal-burgundy/80 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif text-base sm:text-lg transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            👑 Shona
+                        </button>
+                        <button onclick="triggerNicknameLove(event, 'Jaanu', 'My soul feels completely at home whenever I am with you, Jaanu. 🌹')" class="px-5 py-2 rounded-full border border-royal-gold/60 bg-royal-burgundy/80 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif text-base sm:text-lg transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            🌹 Jaanu
+                        </button>
+                        <button onclick="triggerNicknameLove(event, 'Lokkhi', 'You bring so much grace, warmth, and blessing into my life, Lokkhi. 💫')" class="px-5 py-2 rounded-full border border-royal-gold/60 bg-royal-burgundy/80 hover:bg-royal-gold hover:text-royal-bg text-royal-goldLight font-serif text-base sm:text-lg transition-all duration-300 shadow-md active:scale-95 cursor-pointer">
+                            🕊️ Lokkhi
+                        </button>
+                    </div>
+
+                    <!-- Dynamic Nickname Mini Love Note Box -->
+                    <div id="nicknameNoteBox" class="mt-5 min-h-[3.5rem] flex items-center justify-center">
+                        <p id="nicknameNoteText" class="text-base sm:text-xl text-royal-goldLight font-medium italic px-4 py-2 rounded-2xl bg-royal-bg/50 border border-royal-gold/25 transition-all duration-300">
+                            Every name I call you is just another way of saying "I love you endlessly, Dia." ❤️
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Scroll Down CTA -->
+                <div class="mt-8">
+                    <a href="#balloons" class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-royal-goldDark via-royal-gold to-royal-goldDark text-royal-bg font-serif font-semibold text-base sm:text-lg shadow-gold-glow hover:scale-105 transition">
+                        Begin Your Birthday Surprise ↓
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 2: INTERACTIVE BALLOON POPPING & LOVE REVEALS     -->
+        <!-- ========================================================= -->
+        <section id="balloons" class="scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm uppercase tracking-[0.25em] text-royal-rose">Pop Every Balloon, My Love</span>
+                <h2 class="font-script text-5xl sm:text-6xl gold-shimmer mt-1">Balloons Full of My Love</h2>
+                <p class="text-lg sm:text-xl text-royal-cream/85 mt-2">
+                    Tap each floating royal balloon to pop it and discover why you are the most cherished girl in my universe.
+                </p>
+            </div>
+
+            <!-- Balloon Stage -->
+            <div class="royal-frame rounded-3xl bg-royal-plum/65 backdrop-blur-md p-6 sm:p-10 relative">
+                <!-- Pop Counter -->
+                <div class="flex justify-between items-center mb-6 border-b border-royal-gold/20 pb-3">
+                    <span class="text-sm sm:text-base text-royal-goldLight font-serif">
+                        Balloons Popped: <strong id="popCount" class="text-royal-gold">0</strong> / <span id="totalBalloons">8</span>
+                    </span>
+                    <button onclick="resetBalloons()" class="text-xs sm:text-sm px-3.5 py-1.5 rounded-full border border-royal-gold/40 text-royal-goldLight hover:bg-royal-gold/20 transition cursor-pointer">
+                        ↻ Refill Balloons
+                    </button>
+                </div>
+
+                <!-- Grid of Interactive Balloons -->
+                <div id="balloonGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 min-h-[260px]">
+                    <!-- Populated via JS -->
+                </div>
+
+                <!-- Revealed Love Note Banner -->
+                <div id="balloonMessageBanner" class="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-royal-burgundy/90 via-royal-card to-royal-burgundy/90 border border-royal-gold/40 text-center shadow-inner transition-all duration-500">
+                    <p id="balloonMessageText" class="text-lg sm:text-2xl text-royal-goldLight italic font-medium">
+                        🎈 Go ahead, Jantush — pop a balloon to reveal a piece of my heart!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 3: ROYAL CHOCOLATE CAKE, "FUU" BLOW & KNIFE CUT   -->
+        <!-- ========================================================= -->
+        <section id="cake-ceremony" class="scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm uppercase tracking-[0.25em] text-royal-rose">Make A Wish, My Queen</span>
+                <h2 class="font-script text-5xl sm:text-6xl gold-shimmer mt-1">Royal Chocolate Birthday Cake</h2>
+                <p id="cakeInstructionSubtitle" class="text-lg sm:text-xl text-royal-cream/85 mt-2">
+                    Step 1: Close your eyes, make a wish, and blow <strong class="text-royal-gold">"Fuu 🌬️"</strong> into your mic (or tap the button below) to blow out your candles!
+                </p>
+            </div>
+
+            <div class="royal-frame rounded-3xl bg-royal-plum/75 backdrop-blur-md p-5 sm:p-10 relative overflow-hidden">
+                
+                <!-- Status Step Indicator -->
+                <div class="flex flex-wrap justify-center gap-3 mb-6">
+                    <span id="stepBadge1" class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif font-semibold bg-royal-gold text-royal-bg shadow">
+                        1. Blow Candles ("Fuu")
+                    </span>
+                    <span id="stepBadge2" class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif border border-royal-gold/30 text-royal-cream/60">
+                        2. Cut The Chocolate Cake
+                    </span>
+                    <span id="stepBadge3" class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif border border-royal-gold/30 text-royal-cream/60">
+                        3. Celebrate With Kitties
+                    </span>
+                </div>
+
+                <!-- Interactive Cake Stage -->
+                <div class="relative flex flex-col items-center justify-center my-4 select-none">
+                    
+                    <!-- Cheering Kitty Left -->
+                    <div id="leftCheerCat" class="hidden sm:block absolute left-2 md:left-8 bottom-6 w-28 h-28 transition-transform duration-500">
+                        <svg viewBox="0 0 130 130" class="w-full h-full drop-shadow-lg">
+                            <!-- Tail -->
+                            <path d="M25,105 Q5,85 18,65" fill="none" stroke="#f5e6d3" stroke-width="8" stroke-linecap="round" class="cat-tail"/>
+                            <!-- Body -->
+                            <ellipse cx="65" cy="95" rx="30" ry="26" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                            <!-- Waving Paw -->
+                            <g class="cat-paw">
+                                <ellipse cx="96" cy="78" rx="9" ry="13" transform="rotate(25 96 78)" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                                <circle cx="96" cy="74" r="3" fill="#f4b6c2"/>
+                            </g>
+                            <!-- Party Hat -->
+                            <polygon points="65,12 52,36 78,36" fill="#e899a8" stroke="#e6c27a" stroke-width="2"/>
+                            <circle cx="65" cy="11" r="4" fill="#e6c27a"/>
+                            <!-- Ears -->
+                            <polygon points="40,48 44,26 57,40" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                            <polygon points="90,48 86,26 73,40" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                            <!-- Head -->
+                            <ellipse cx="65" cy="58" rx="27" ry="22" fill="#fff8f0" stroke="#e6c27a" stroke-width="2"/>
+                            <!-- Happy Closed Eyes -->
+                            <path d="M51,55 Q55,49 59,55" fill="none" stroke="#2b141e" stroke-width="2.2" stroke-linecap="round"/>
+                            <path d="M71,55 Q75,49 79,55" fill="none" stroke="#2b141e" stroke-width="2.2" stroke-linecap="round"/>
+                            <!-- Blush & Smile -->
+                            <circle cx="48" cy="61" r="4" fill="#f4a4b4" opacity="0.7"/>
+                            <circle cx="82" cy="61" r="4" fill="#f4a4b4" opacity="0.7"/>
+                            <path d="M60,63 Q65,68 70,63" fill="none" stroke="#2b141e" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <div id="catSpeechLeft" class="text-center text-xs bg-royal-cream text-royal-bg font-serif font-semibold px-2.5 py-1 rounded-full shadow -mt-2 border border-royal-gold">
+                            Meow! Blow Fuu! 🎂
+                        </div>
+                    </div>
+
+                    <!-- Cheering Kitty Right (Chocolate-colored Ragdoll/Siamese Kitty) -->
+                    <div id="rightCheerCat" class="hidden sm:block absolute right-2 md:right-8 bottom-6 w-28 h-28 transition-transform duration-500">
+                        <svg viewBox="0 0 130 130" class="w-full h-full drop-shadow-lg">
+                            <!-- Body -->
+                            <ellipse cx="65" cy="95" rx="30" ry="26" fill="#f7ead9" stroke="#e6c27a" stroke-width="2"/>
+                            <!-- Party Hat -->
+                            <polygon points="65,12 52,36 78,36" fill="#e6c27a" stroke="#b88b3a" stroke-width="2"/>
+                            <circle cx="65" cy="11" r="4" fill="#e899a8"/>
+                            <!-- Ears (Chocolate brown) -->
+                            <polygon points="40,48 44,26 57,40" fill="#5c3324" stroke="#e6c27a" stroke-width="1.5"/>
+                            <polygon points="90,48 86,26 73,40" fill="#5c3324" stroke="#e6c27a" stroke-width="1.5"/>
+                            <!-- Head -->
+                            <ellipse cx="65" cy="58" rx="27" ry="22" fill="#f7ead9" stroke="#e6c27a" stroke-width="2"/>
+                            <!-- Chocolate Face Mask -->
+                            <ellipse cx="65" cy="60" rx="16" ry="13" fill="#5c3324" opacity="0.88"/>
+                            <!-- Blue Eyes -->
+                            <g class="cat-eye">
+                                <circle cx="56" cy="57" r="3.8" fill="#7ec8e3"/>
+                                <circle cx="56" cy="57" r="1.8" fill="#1a1a1a"/>
+                            </g>
+                            <g class="cat-eye">
+                                <circle cx="74" cy="57" r="3.8" fill="#7ec8e3"/>
+                                <circle cx="74" cy="57" r="1.8" fill="#1a1a1a"/>
+                            </g>
+                            <path d="M61,64 Q65,68 69,64" fill="none" stroke="#f8e3b4" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                        <div id="catSpeechRight" class="text-center text-xs bg-royal-cream text-royal-bg font-serif font-semibold px-2.5 py-1 rounded-full shadow -mt-2 border border-royal-gold">
+                            Yum Chocolate! 🍫
+                        </div>
+                    </div>
+
+                    <!-- THE LAVISH MULTI-TIERED CHOCOLATE BIRTHDAY CAKE SVG -->
+                    <div id="cakeWrapper" class="relative w-full max-w-md mx-auto pt-6 pb-2 touch-none">
+                        <svg id="chocolateCakeSvg" viewBox="0 0 420 340" class="w-full h-auto drop-shadow-2xl overflow-visible">
+                            <defs>
+                                <!-- Rich Dark Chocolate Gradients -->
+                                <linearGradient id="chocTierBottom" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#2c130c"/>
+                                    <stop offset="30%" stop-color="#4a2216"/>
+                                    <stop offset="70%" stop-color="#3b1910"/>
+                                    <stop offset="100%" stop-color="#220d08"/>
+                                </linearGradient>
+                                <linearGradient id="chocTierTop" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#36170e"/>
+                                    <stop offset="35%" stop-color="#58291b"/>
+                                    <stop offset="75%" stop-color="#431d12"/>
+                                    <stop offset="100%" stop-color="#281009"/>
+                                </linearGradient>
+                                <linearGradient id="ganacheDrip" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#1e0a06"/>
+                                    <stop offset="100%" stop-color="#3c180f"/>
+                                </linearGradient>
+                                <linearGradient id="goldStand" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#9e7328"/>
+                                    <stop offset="35%" stop-color="#f8e3b4"/>
+                                    <stop offset="65%" stop-color="#d4a64a"/>
+                                    <stop offset="100%" stop-color="#8c631e"/>
+                                </linearGradient>
+                                <radialGradient id="flameGrad" cx="50%" cy="70%" r="55%">
+                                    <stop offset="0%" stop-color="#ffffff"/>
+                                    <stop offset="35%" stop-color="#fff099"/>
+                                    <stop offset="75%" stop-color="#ff9922"/>
+                                    <stop offset="100%" stop-color="#ff3300" stop-opacity="0"/>
+                                </radialGradient>
+                            </defs>
+
+                            <!-- Royal Golden Cake Stand -->
+                            <ellipse cx="210" cy="316" rx="165" ry="16" fill="url(#goldStand)"/>
+                            <rect x="192" y="284" width="36" height="32" fill="url(#goldStand)"/>
+                            <ellipse cx="210" cy="284" rx="178" ry="20" fill="url(#goldStand)" stroke="#fff3d1" stroke-width="1.5"/>
+                            <ellipse cx="210" cy="281" rx="168" ry="15" fill="#2a110b"/>
+
+                            <!-- BOTTOM TIER: Rich Belgian Chocolate -->
+                            <path d="M72,205 L72,272 A138,18 0 0,0 348,272 L348,205 Z" fill="url(#chocTierBottom)"/>
+                            <ellipse cx="210" cy="205" rx="138" ry="18" fill="#522619"/>
+                            
+                            <!-- Creamy Chocolate Truffle Filling Stripe on Bottom Tier -->
+                            <path d="M72,238 A138,18 0 0,0 348,238" fill="none" stroke="#8c4a32" stroke-width="5"/>
+                            <path d="M72,243 A138,18 0 0,0 348,243" fill="none" stroke="#e6c27a" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+                            <!-- Glossy Dark Ganache Drips on Bottom Tier -->
+                            <path d="M72,205 C72,226 86,232 90,218 C94,205 104,238 112,238 C120,238 122,212 132,215 C142,218 144,244 154,244 C164,244 166,216 178,216 C190,216 192,248 204,248 C216,248 218,218 230,218 C242,218 246,242 256,242 C266,242 270,215 282,215 C294,215 296,236 306,236 C316,236 320,214 330,216 C338,218 342,228 348,212 L348,205 A138,18 0 0,1 72,205 Z" fill="url(#ganacheDrip)"/>
+
+                            <!-- Gold Pearls Around Base of Bottom Tier -->
+                            <g fill="#f8e3b4">
+                                <circle cx="82" cy="276" r="4"/><circle cx="98" cy="280" r="4"/><circle cx="115" cy="283" r="4"/>
+                                <circle cx="133" cy="285" r="4"/><circle cx="152" cy="287" r="4"/><circle cx="171" cy="288" r="4"/>
+                                <circle cx="190" cy="289" r="4"/><circle cx="210" cy="289" r="4"/><circle cx="230" cy="289" r="4"/>
+                                <circle cx="249" cy="288" r="4"/><circle cx="268" cy="287" r="4"/><circle cx="287" cy="285" r="4"/>
+                                <circle cx="305" cy="283" r="4"/><circle cx="322" cy="280" r="4"/><circle cx="338" cy="276" r="4"/>
+                            </g>
+
+                            <!-- TOP TIER: Velvet Mocha Chocolate -->
+                            <path d="M114,132 L114,198 A96,14 0 0,0 306,198 L306,132 Z" fill="url(#chocTierTop)"/>
+                            <ellipse cx="210" cy="132" rx="96" ry="14" fill="#632f20"/>
+
+                            <!-- Ganache Drips on Top Tier -->
+                            <path d="M114,132 C114,152 126,158 132,145 C138,132 146,166 156,166 C166,166 168,140 178,142 C188,144 192,172 204,172 C216,172 220,144 232,144 C244,144 248,168 258,168 C268,168 272,142 282,144 C292,146 296,158 306,142 L306,132 A96,14 0 0,1 114,132 Z" fill="url(#ganacheDrip)"/>
+
+                            <!-- Chocolate Strawberries & Gold Leaf Garnish on Top -->
+                            <g transform="translate(132, 120)">
+                                <ellipse cx="8" cy="10" rx="7" ry="9" fill="#c82333"/>
+                                <path d="M3,4 Q8,0 13,4" fill="#2e7d32" stroke="#2e7d32" stroke-width="2"/>
+                            </g>
+                            <g transform="translate(272, 120)">
+                                <ellipse cx="8" cy="10" rx="7" ry="9" fill="#c82333"/>
+                                <path d="M3,4 Q8,0 13,4" fill="#2e7d32" stroke="#2e7d32" stroke-width="2"/>
+                            </g>
+
+                            <!-- Golden Script "DIA" Plaque on Cake Front -->
+                            <rect x="165" y="222" width="90" height="32" rx="16" fill="#1e0914" stroke="#e6c27a" stroke-width="2"/>
+                            <text x="210" y="244" text-anchor="middle" fill="#f8e3b4" font-family="'Playfair Display', serif" font-weight="700" font-size="18" letter-spacing="3">
+                                DIA ❤️
+                            </text>
+
+                            <!-- CUTTABLE SLICE WEDGE (Animates outward when cut!) -->
+                            <g id="cakeSliceWedge" class="cake-slice-piece">
+                                <!-- Inner Moist Chocolate Sponge Revealed -->
+                                <polygon points="210,132 272,142 272,198 210,188" fill="#5e2c1d" stroke="#e6c27a" stroke-width="1"/>
+                                <!-- Chocolate Ganache Layers Inside Slice -->
+                                <line x1="210" y1="152" x2="272" y2="162" stroke="#240e08" stroke-width="4"/>
+                                <line x1="210" y1="172" x2="272" y2="182" stroke="#8c4a32" stroke-width="4"/>
+                                <!-- Top Crust of Slice -->
+                                <polygon points="210,132 272,142 252,150" fill="#3a170e"/>
+                            </g>
+
+                            <!-- 5 GOLDEN BIRTHDAY CANDLES -->
+                            <g id="candlesGroup">
+                                <!-- Candle 1 -->
+                                <g transform="translate(150, 92)">
+                                    <rect x="0" y="14" width="8" height="32" rx="3" fill="#fdf8f0" stroke="#e6c27a" stroke-width="1.2"/>
+                                    <line x1="0" y1="22" x2="8" y2="26" stroke="#e899a8" stroke-width="2.5"/>
+                                    <line x1="0" y1="32" x2="8" y2="36" stroke="#e899a8" stroke-width="2.5"/>
+                                    <line x1="4" y1="10" x2="4" y2="14" stroke="#222" stroke-width="1.5"/>
+                                    <ellipse cx="4" cy="4" rx="5.5" ry="9.5" fill="url(#flameGrad)" class="candle-flame" style="animation-delay: 0s;"/>
+                                    <g class="smoke-container" transform="translate(4, 6)"></g>
+                                </g>
+                                <!-- Candle 2 -->
+                                <g transform="translate(178, 86)">
+                                    <rect x="0" y="14" width="8" height="34" rx="3" fill="#fdf8f0" stroke="#e6c27a" stroke-width="1.2"/>
+                                    <line x1="0" y1="22" x2="8" y2="26" stroke="#e6c27a" stroke-width="2.5"/>
+                                    <line x1="0" y1="32" x2="8" y2="36" stroke="#e6c27a" stroke-width="2.5"/>
+                                    <line x1="4" y1="10" x2="4" y2="14" stroke="#222" stroke-width="1.5"/>
+                                    <ellipse cx="4" cy="4" rx="5.5" ry="9.5" fill="url(#flameGrad)" class="candle-flame" style="animation-delay: 0.2s;"/>
+                                    <g class="smoke-container" transform="translate(4, 6)"></g>
+                                </g>
+                                <!-- Candle 3 (Center Tall Royal Candle) -->
+                                <g transform="translate(206, 80)">
+                                    <rect x="0" y="14" width="9" height="38" rx="3" fill="#e6c27a" stroke="#fff3d1" stroke-width="1.2"/>
+                                    <line x1="0" y1="24" x2="9" y2="28" stroke="#c85a72" stroke-width="2.5"/>
+                                    <line x1="0" y1="36" x2="9" y2="40" stroke="#c85a72" stroke-width="2.5"/>
+                                    <line x1="4.5" y1="10" x2="4.5" y2="14" stroke="#222" stroke-width="1.5"/>
+                                    <ellipse cx="4.5" cy="3" rx="6.5" ry="11" fill="url(#flameGrad)" class="candle-flame" style="animation-delay: 0.4s;"/>
+                                    <g class="smoke-container" transform="translate(4.5, 6)"></g>
+                                </g>
+                                <!-- Candle 4 -->
+                                <g transform="translate(235, 86)">
+                                    <rect x="0" y="14" width="8" height="34" rx="3" fill="#fdf8f0" stroke="#e6c27a" stroke-width="1.2"/>
+                                    <line x1="0" y1="22" x2="8" y2="26" stroke="#e6c27a" stroke-width="2.5"/>
+                                    <line x1="0" y1="32" x2="8" y2="36" stroke="#e6c27a" stroke-width="2.5"/>
+                                    <line x1="4" y1="10" x2="4" y2="14" stroke="#222" stroke-width="1.5"/>
+                                    <ellipse cx="4" cy="4" rx="5.5" ry="9.5" fill="url(#flameGrad)" class="candle-flame" style="animation-delay: 0.15s;"/>
+                                    <g class="smoke-container" transform="translate(4, 6)"></g>
+                                </g>
+                                <!-- Candle 5 -->
+                                <g transform="translate(263, 92)">
+                                    <rect x="0" y="14" width="8" height="32" rx="3" fill="#fdf8f0" stroke="#e6c27a" stroke-width="1.2"/>
+                                    <line x1="0" y1="22" x2="8" y2="26" stroke="#e899a8" stroke-width="2.5"/>
+                                    <line x1="0" y1="32" x2="8" y2="36" stroke="#e899a8" stroke-width="2.5"/>
+                                    <line x1="4" y1="10" x2="4" y2="14" stroke="#222" stroke-width="1.5"/>
+                                    <ellipse cx="4" cy="4" rx="5.5" ry="9.5" fill="url(#flameGrad)" class="candle-flame" style="animation-delay: 0.35s;"/>
+                                    <g class="smoke-container" transform="translate(4, 6)"></g>
+                                </g>
+                            </g>
+
+                            <!-- ANIMATED GOLDEN CAKE KNIFE (Appears after candles are blown!) -->
+                            <g id="cakeKnifeGroup" class="hidden" transform="translate(285, 75) rotate(-28)" style="transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);">
+                                <!-- Gleaming Silver/Gold Blade -->
+                                <path d="M0,12 L115,12 L130,22 L115,28 L0,28 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+                                <line x1="6" y1="16" x2="112" y2="16" stroke="#ffffff" stroke-width="2"/>
+                                <!-- Royal Gold Bolster & Handle -->
+                                <rect x="-8" y="10" width="10" height="20" rx="3" fill="#e6c27a"/>
+                                <rect x="-65" y="12" width="58" height="16" rx="8" fill="#58182e" stroke="#e6c27a" stroke-width="2"/>
+                                <circle cx="-55" cy="20" r="2.5" fill="#e6c27a"/>
+                                <circle cx="-36" cy="20" r="2.5" fill="#e6c27a"/>
+                                <circle cx="-18" cy="20" r="2.5" fill="#e6c27a"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- INTERACTIVE CONTROLS FOR CANDLE BLOWING ("FUU") & CAKE CUTTING -->
+                <div class="max-w-xl mx-auto text-center space-y-4 mt-2">
+                    
+                    <!-- Phase 1: Blow Out Candles Controls -->
+                    <div id="blowControls" class="space-y-4">
+                        <!-- Live Breath/Wind Meter -->
+                        <div id="micMeterContainer" class="hidden max-w-xs mx-auto bg-royal-bg/80 p-3 rounded-2xl border border-royal-gold/30">
+                            <div class="flex justify-between text-xs text-royal-goldLight mb-1">
+                                <span>🌬️ Breath ("Fuu") Sensor</span>
+                                <span id="windPercent">0%</span>
+                            </div>
+                            <div class="w-full h-3 bg-royal-plum rounded-full overflow-hidden border border-royal-gold/20">
+                                <div id="windMeterBar" class="h-full w-0 bg-gradient-to-r from-royal-rose via-royal-gold to-emerald-400 transition-all duration-75"></div>
+                            </div>
+                            <p class="text-xs text-royal-cream/75 mt-1.5 italic">
+                                Blow gently ("Fuuuu!") towards your phone/laptop microphone!
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <button id="enableMicBtn" onclick="startMicBlowDetection()" class="px-6 py-3 rounded-full bg-gradient-to-r from-royal-goldDark via-royal-gold to-royal-goldDark text-royal-bg font-serif font-semibold text-sm sm:text-base shadow-gold-glow hover:scale-105 active:scale-95 transition cursor-pointer">
+                                🎙️ Enable Mic & Blow "Fuu" 🌬️
+                            </button>
+
+                            <button onclick="blowOutCandles()" class="px-5 py-3 rounded-full border border-royal-gold/60 bg-royal-burgundy/80 hover:bg-royal-gold/20 text-royal-goldLight font-serif text-sm sm:text-base transition active:scale-95 cursor-pointer">
+                                💨 Tap to Blow Candles
+                            </button>
+                        </div>
+                        <p id="micStatusText" class="text-xs sm:text-sm text-royal-rose/90 italic"></p>
+                    </div>
+
+                    <!-- Phase 2: Cut Cake With Knife Controls -->
+                    <div id="cutControls" class="hidden space-y-4">
+                        <p class="text-base sm:text-xl text-royal-goldLight font-medium">
+                            ✨ Yay! Your wish is on its way to the stars, Shona! Now let's cut your chocolate cake!
+                        </p>
+                        <button id="cutCakeBtn" onclick="animateCutCake()" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-royal-roseDeep via-royal-rose to-royal-gold text-royal-bg font-serif font-bold text-base sm:text-lg shadow-rose-glow hover:scale-105 active:scale-95 transition cursor-pointer">
+                            🔪 Slice the Chocolate Cake for Dia! 🍫
+                        </button>
+                    </div>
+
+                    <!-- Phase 3: Cake Sliced Celebration Message -->
+                    <div id="celebrateCakeControls" class="hidden space-y-3 p-4 rounded-2xl bg-royal-bg/60 border border-royal-gold/40">
+                        <p class="text-lg sm:text-2xl font-script text-royal-gold">
+                            First bite for my Queen DIA — Happy Birthday, Jaanu! 🍰❤️
+                        </p>
+                        <p class="text-sm sm:text-base text-royal-cream/90">
+                            Even the kitties are purring with joy for you! Scroll down to read why I love you so much and open your royal love letter.
+                        </p>
+                        <button onclick="resetCakeCeremony()" class="text-xs px-4 py-1.5 rounded-full border border-royal-gold/35 text-royal-goldLight hover:bg-royal-gold/15 transition cursor-pointer">
+                            🕯️ Relight Candles & Replay
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 4: HEARTFELT DIALOGUES ("WHY I LOVE YOU, DIA")     -->
+        <!-- ========================================================= -->
+        <section id="love-dialogues" class="scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm uppercase tracking-[0.25em] text-royal-rose">Straight From My Heart</span>
+                <h2 class="font-script text-5xl sm:text-6xl gold-shimmer mt-1">Why I Love You, My Dia</h2>
+                <p class="text-lg sm:text-xl text-royal-cream/85 mt-2">
+                    A few of the million reasons my heart belongs completely to you, my Lokkhi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Dialogue Card 1 -->
+                <div class="royal-frame rounded-2xl bg-royal-plum/70 p-6 sm:p-8 hover:border-royal-gold transition duration-300 group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">✨</span>
+                        <span class="text-xs uppercase tracking-widest text-royal-gold font-serif">For My Jantush</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl text-royal-goldLight mb-2">Your Adorable Little Smiles</h3>
+                    <p class="text-base sm:text-lg text-royal-cream/90 leading-relaxed">
+                        "Whenever you smile, Jantush, it feels like the entire universe pauses just to admire you. Your laugh is my favorite melody, and seeing you happy is the greatest gift my life could ever ask for."
+                    </p>
+                </div>
+
+                <!-- Dialogue Card 2 -->
+                <div class="royal-frame rounded-2xl bg-royal-plum/70 p-6 sm:p-8 hover:border-royal-gold transition duration-300 group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">🌹</span>
+                        <span class="text-xs uppercase tracking-widest text-royal-gold font-serif">For My Shona</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl text-royal-goldLight mb-2">Every Little Version of You</h3>
+                    <p class="text-base sm:text-lg text-royal-cream/90 leading-relaxed">
+                        "I love your endless stories, your cute stubbornness, your childish moments, and your soft heart, Shona. I love every version of you—even on days when you don't realize how extraordinary you are."
+                    </p>
+                </div>
+
+                <!-- Dialogue Card 3 -->
+                <div class="royal-frame rounded-2xl bg-royal-plum/70 p-6 sm:p-8 hover:border-royal-gold transition duration-300 group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">🕊️</span>
+                        <span class="text-xs uppercase tracking-widest text-royal-gold font-serif">For My Lokkhi</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl text-royal-goldLight mb-2">The Peace I Find In You</h3>
+                    <p class="text-base sm:text-lg text-royal-cream/90 leading-relaxed">
+                        "Out of billions of people in this enormous world, my soul found its home in you, Lokkhi. Even the most ordinary day becomes unforgettable simply because you are part of it."
+                    </p>
+                </div>
+
+                <!-- Dialogue Card 4 -->
+                <div class="royal-frame rounded-2xl bg-royal-plum/70 p-6 sm:p-8 hover:border-royal-gold transition duration-300 group">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl">👑</span>
+                        <span class="text-xs uppercase tracking-widest text-royal-gold font-serif">For My Babe & Jaanu</span>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-2xl text-royal-goldLight mb-2">Today, Tomorrow & Always</h3>
+                    <p class="text-base sm:text-lg text-royal-cream/90 leading-relaxed">
+                        "I want to be beside you through every season, every sunset, every silly argument, and every dream you chase, Jaanu. Loving you is the easiest and best decision I have ever made, Babe."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 5: THE GRAND WAX-SEALED ROYAL LOVE LETTER         -->
+        <!-- ========================================================= -->
+        <section id="love-letter" class="scroll-mt-24">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs sm:text-sm uppercase tracking-[0.25em] text-royal-rose">Sealed With All My Love</span>
+                <h2 class="font-script text-5xl sm:text-6xl gold-shimmer mt-1">A Love Letter For DIA</h2>
+                <p class="text-lg sm:text-xl text-royal-cream/85 mt-2">
+                    Tap the royal crimson & gold wax seal to unfold my heart to you.
+                </p>
+            </div>
+
+            <!-- Interactive Envelope Wrapper -->
+            <div id="envelopeContainer" class="max-w-3xl mx-auto">
+                
+                <!-- Closed Royal Envelope Card -->
+                <div id="closedEnvelope" onclick="openLoveLetter()" class="royal-frame rounded-3xl bg-gradient-to-br from-[#3c1229] via-[#280b1b] to-[#1b0712] p-8 sm:p-14 text-center cursor-pointer group hover:shadow-gold-glow transition-all duration-500 relative overflow-hidden">
+                    
+                    <!-- Decorative Corner Flourishes -->
+                    <div class="absolute top-4 left-4 text-royal-gold/40 text-2xl">❧</div>
+                    <div class="absolute top-4 right-4 text-royal-gold/40 text-2xl scale-x-[-1]">❧</div>
+                    <div class="absolute bottom-4 left-4 text-royal-gold/40 text-2xl scale-y-[-1]">❧</div>
+                    <div class="absolute bottom-4 right-4 text-royal-gold/40 text-2xl scale-[-1]">❧</div>
+
+                    <p class="uppercase tracking-[0.3em] text-xs sm:text-sm text-royal-gold/80 font-serif mb-3">
+                        Private & Confidential • Royal Delivery
+                    </p>
+                    <h3 class="font-script text-4xl sm:text-6xl text-royal-goldLight mb-6">
+                        For My Love, DIA ❤️
+                    </h3>
+
+                    <!-- Crimson & Gold Wax Seal Button -->
+                    <div class="my-6 flex justify-center">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#a61c3c] via-[#7a1029] to-[#4d0818] border-4 border-royal-gold/70 shadow-2xl flex flex-col items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
+                            <div class="absolute inset-1.5 rounded-full border border-royal-gold/40"></div>
+                            <span class="font-script text-3xl sm:text-4xl text-royal-goldLight drop-shadow">Dia</span>
+                            <span class="text-[10px] uppercase tracking-widest text-royal-gold/90 font-serif">Tap Seal</span>
+                        </div>
+                    </div>
+
+                    <p class="text-base sm:text-lg text-royal-cream/85 italic">
+                        Click the golden wax seal to open your birthday letter, Jaanu...
+                    </p>
+                </div>
+
+                <!-- Opened Royal Parchment Love Letter -->
+                <div id="openedLetter" class="hidden parchment-paper rounded-3xl p-6 sm:p-12 md:p-14 shadow-2xl border-2 border-royal-gold relative transition-all duration-700">
+                    
+                    <!-- Top Ornamental Header -->
+                    <div class="flex items-center justify-between border-b border-royal-goldDark/30 pb-4 mb-8">
+                        <div class="flex items-center gap-2 text-royal-goldDark">
+                            <span class="text-xl">👑</span>
+                            <span class="font-serif text-xs sm:text-sm uppercase tracking-[0.2em] font-semibold">For My Queen DIA</span>
+                        </div>
+                        <button onclick="closeLoveLetter()" class="text-xs sm:text-sm px-3 py-1 rounded-full border border-royal-goldDark/40 text-[#5c2638] hover:bg-royal-goldDark/10 transition cursor-pointer">
+                            Fold Envelope
+                        </button>
+                    </div>
+
+                    <!-- EXACT LOVE LETTER TEXT WORD-FOR-WORD -->
+                    <article class="space-y-5 text-lg sm:text-xl md:text-[21px] leading-relaxed text-[#2b141e] font-body font-medium">
+                        <p class="font-script text-3xl sm:text-4xl text-[#7a1836] mb-2">
+                            To the girl who makes my world a little more beautiful,
+                        </p>
+
+                        <p class="font-serif font-semibold text-xl sm:text-2xl text-[#6e142f]">
+                            Happy Birthday, my love. ❤️
+                        </p>
+
+                        <p>
+                            I wish I could put into words just how much you mean to me, but somehow, every word feels too small when it comes to you. How do I describe someone who has become such a beautiful part of my existence? How do I explain the happiness I find in your presence, the peace I feel in your words, and the countless little moments that become special simply because they have you in them?
+                        </p>
+
+                        <p>
+                            Today is the day the world was gifted with someone who would eventually become my favourite person. And honestly, I don't think you realise how grateful I am that our paths crossed. Out of all the people in this enormous world, I got to know you, fall for you, and call you mine. If that's not something worth being grateful for, I don't know what is.
+                        </p>
+
+                        <p>
+                            I want you to know that I don't just love the beautiful pictures you send me, your adorable little smiles, or the way you make my heart skip a beat. I love the little things too. Your random conversations, your silly complaints, your endless stories, your stubbornness, your childish moments, even those little things you probably don't realise I notice. I love the person you are when nobody is watching. I love every version of you, even the ones you sometimes struggle to love yourself.
+                        </p>
+
+                        <p>
+                            And if there's one thing I wish for you today, it's that life treats your heart as gently as it deserves. May you never run out of reasons to smile. May every dream you've quietly kept inside your heart find its way into reality. May you always find warmth on your coldest days, courage in your hardest moments, and happiness in the simplest things. I hope you never have to question your worth, because you deserve so much more beautiful things than this world could ever put into words.
+                        </p>
+
+                        <p>
+                            I cannot promise that every day will be perfect, or that we'll never disagree, but I can promise that my love isn't something I want to reserve only for the easy days. I want to be there for the ordinary mornings, the unexpected evenings, the silly arguments, the beautiful milestones, and all those little chapters that make a lifetime. I want to keep discovering new reasons to fall in love with you, even after I've run out of words to explain why I did in the first place.
+                        </p>
+
+                        <p>
+                            And someday, when we look back at all these birthdays, I hope we'll have countless beautiful memories to laugh about. I hope we'll remember how young we were, how deeply we loved, and how we kept choosing each other through all the different seasons of life.
+                        </p>
+
+                        <p>
+                            If I were granted a thousand wishes today, I'd probably spend most of them wishing for your happiness. And with whatever wishes remained, I'd wish for more time, more memories, more sunsets, more conversations, and more birthdays beside you.
+                        </p>
+
+                        <p class="font-serif font-semibold text-xl text-[#6e142f]">
+                            Happy Birthday, my favourite human.
+                        </p>
+
+                        <p>
+                            Thank you for existing. Thank you for being you. And thank you for giving my heart someone so wonderful to love.
+                        </p>
+
+                        <p>
+                            I hope this year brings you everything your beautiful heart has been waiting for. And I hope, in every little and big way, I get to be a part of that happiness.
+                        </p>
+
+                        <p>
+                            I love you more than my words could ever explain, more than these paragraphs could ever express, and perhaps a little more with every passing day.
+                        </p>
+
+                        <p class="font-serif font-semibold text-xl sm:text-2xl text-[#6e142f] pt-2">
+                            Here's to you, my love. Today, tomorrow, and all the beautiful tomorrows yet to come. ❤️
+                        </p>
+                    </article>
+
+                    <!-- Bottom Signature & Purring Kitty -->
+                    <div class="mt-10 pt-6 border-t border-royal-goldDark/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-center sm:text-left">
+                            <p class="font-script text-3xl sm:text-4xl text-[#7a1836]">Forever Yours, Always</p>
+                            <p class="text-sm text-[#5c2638] font-serif">For Babe • Jantush • Shona • Jaanu • Lokkhi</p>
+                        </div>
+
+                        <button onclick="launchGrandFinale()" class="px-6 py-3 rounded-full bg-gradient-to-r from-[#7a1836] to-[#4a0d20] text-royal-goldLight font-serif font-semibold text-sm sm:text-base shadow-lg hover:scale-105 active:scale-95 transition cursor-pointer">
+                            🎆 Shower Dia With Love & Fireworks!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center py-8 border-t border-royal-gold/20 bg-royal-bg/80 px-4">
+        <p class="font-script text-3xl text-royal-gold">Happy Birthday, My Queen DIA ❤️</p>
+        <p class="text-sm text-royal-cream/70 mt-1 font-serif">
+            Crafted with infinite love for Babe, Jantush, Shona, Jaanu & Lokkhi • 🐾 Purrs & Kisses
+        </p>
+    </footer>
+
+    <!-- ========================================================= -->
+    <!-- JAVASCRIPT: MUSIC SYNTH, BALLOONS, MIC "FUU", CAKE & FX   -->
+    <!-- ========================================================= -->
+    <script>
+        /* -----------------------------------------------------------
+         * 1. FAIRY LIGHTS INITIALIZATION
+         * ----------------------------------------------------------- */
+        (function initFairyLights() {
+            const container = document.getElementById('fairyLights');
+            const count = window.innerWidth < 640 ? 14 : 26;
+            for (let i = 0; i < count; i++) {
+                const bulb = document.createElement('div');
+                const isRose = i % 3 === 0;
+                bulb.className = 'w-2 h-2.5 rounded-full mt-1';
+                bulb.style.backgroundColor = isRose ? '#e899a8' : '#f8e3b4';
+                bulb.style.boxShadow = isRose
+                    ? '0 0 10px 2px rgba(232, 153, 168, 0.85)'
+                    : '0 0 10px 2px rgba(248, 227, 180, 0.85)';
+                bulb.style.animation = `twinkle ${2 + (i % 3) * 0.8}s ease-in-out infinite`;
+                bulb.style.animationDelay = `${(i * 0.25) % 2}s`;
+                container.appendChild(bulb);
+            }
+        })();
+
+        /* -----------------------------------------------------------
+         * 2. SOOTHING ROMANTIC MUSIC SYNTHESIZER (Web Audio API)
+         *    Zero external files needed - plays a warm music-box /
+         *    celesta & lush string pad waltz melody!
+         * ----------------------------------------------------------- */
+        let audioCtx = null;
+        let isMusicPlaying = false;
+        let musicLoopTimer = null;
+        let masterGain = null;
+
+        // Romantic Birthday Waltz / Lullaby Notes (Frequencies in Hz)
+        const romanticMelody = [
+            // Phrase 1: Gentle warm waltz
+            { freq: 392.00, dur: 0.75, chord: [261.63, 329.63, 392.00] }, // G4 over Cmaj
+            { freq: 440.00, dur: 0.75, chord: null },                    // A4
+            { freq: 493.88, dur: 1.50, chord: [246.94, 293.66, 392.00] }, // B4 over G/B
+            { freq: 523.25, dur: 0.75, chord: [220.00, 261.63, 329.63] }, // C5 over Am
+            { freq: 493.88, dur: 0.75, chord: null },                    // B4
+            { freq: 440.00, dur: 1.50, chord: [174.61, 220.00, 261.63] }, // A4 over Fmaj
+            // Phrase 2: Sweet tender resolution
+            { freq: 392.00, dur: 0.75, chord: [196.00, 246.94, 293.66] }, // G4 over G
+            { freq: 329.63, dur: 0.75, chord: null },                    // E4
+            { freq: 349.23, dur: 1.50, chord: [174.61, 220.00, 261.63] }, // F4 over F
+            { freq: 392.00, dur: 0.75, chord: [196.00, 246.94, 349.23] }, // G4 over G7
+            { freq: 329.63, dur: 0.75, chord: null },                    // E4
+            { freq: 261.63, dur: 1.80, chord: [130.81, 196.00, 261.63, 329.63] } // C4 over Cmaj
+        ];
+
+        let noteIndex = 0;
+
+        function playCelestaNote(freq, duration) {
+            if (!audioCtx || !isMusicPlaying) return;
+            const now = audioCtx.currentTime;
+
+            // Main bell/music-box sine tone
+            const osc = audioCtx.createOscillator();
+            const overtone = audioCtx.createOscillator();
+            const noteGain = audioCtx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now);
+
+            // Soft octave shimmer
+            overtone.type = 'triangle';
+            overtone.frequency.setValueAtTime(freq * 2, now);
+
+            const overtoneGain = audioCtx.createGain();
+            overtoneGain.gain.setValueAtTime(0.06, now);
+            overtoneGain.gain.exponentialRampToValueAtTime(0.0001, now + duration * 0.8);
+
+            noteGain.gain.setValueAtTime(0.0001, now);
+            noteGain.gain.linearRampToValueAtTime(0.16, now + 0.04);
+            noteGain.gain.exponentialRampToValueAtTime(0.0008, now + duration + 0.9);
+
+            osc.connect(noteGain);
+            overtone.connect(overtoneGain);
+            overtoneGain.connect(noteGain);
+            noteGain.connect(masterGain);
+
+            osc.start(now);
+            overtone.start(now);
+            osc.stop(now + duration + 1.0);
+            overtone.stop(now + duration + 1.0);
+        }
+
+        function playWarmPadChord(freqs, duration) {
+            if (!audioCtx || !isMusicPlaying || !freqs) return;
+            const now = audioCtx.currentTime;
+
+            freqs.forEach((f) => {
+                const osc = audioCtx.createOscillator();
+                const padGain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(f, now);
+
+                padGain.gain.setValueAtTime(0.0001, now);
+                padGain.gain.linearRampToValueAtTime(0.045, now + 0.4);
+                padGain.gain.exponentialRampToValueAtTime(0.0005, now + duration + 1.4);
+
+                osc.connect(padGain);
+                padGain.connect(masterGain);
+                osc.start(now);
+                osc.stop(now + duration + 1.5);
+            });
+        }
+
+        function scheduleNextRomanticNote() {
+            if (!isMusicPlaying) return;
+            const step = romanticMelody[noteIndex];
+            playCelestaNote(step.freq, step.dur);
+            if (step.chord) {
+                playWarmPadChord(step.chord, step.dur * 2);
+            }
+            noteIndex = (noteIndex + 1) % romanticMelody.length;
+            musicLoopTimer = setTimeout(scheduleNextRomanticNote, step.dur * 1000);
+        }
+
+        function toggleRomanticMusic(forcePlay = false) {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioContextClass();
+                masterGain = audioCtx.createGain();
+                masterGain.gain.setValueAtTime(0.75, audioCtx.currentTime);
+                masterGain.connect(audioCtx.destination);
+            }
+
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            if (forcePlay && isMusicPlaying) return;
+
+            isMusicPlaying = forcePlay ? true : !isMusicPlaying;
+
+            const btnLabel = document.getElementById('musicLabel');
+            const btnIcon = document.getElementById('musicIcon');
+
+            if (isMusicPlaying) {
+                btnLabel.textContent = 'Melody Playing';
+                btnIcon.textContent = '🎶';
+                clearTimeout(musicLoopTimer);
+                scheduleNextRomanticNote();
+            } else {
+                btnLabel.textContent = 'Play Romantic Melody';
+                btnIcon.textContent = '🎵';
+                clearTimeout(musicLoopTimer);
+            }
+        }
+
+        // Gentle auto-start on first user interaction anywhere on page
+        let firstInteractionDone = false;
+        document.addEventListener('pointerdown', () => {
+            if (!firstInteractionDone) {
+                firstInteractionDone = true;
+                toggleRomanticMusic(true);
+            }
+        }, { once: true });
+
+        // Play soft chime sound effect for pops & clicks
+        function playPopChime(pitch = 660) {
+            if (!audioCtx) return;
+            try {
+                const now = audioCtx.currentTime;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(pitch, now);
+                osc.frequency.exponentialRampToValueAtTime(pitch * 1.5, now + 0.14);
+
+                gain.gain.setValueAtTime(0.14, now);
+                gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(now);
+                osc.stop(now + 0.2);
+            } catch (e) {}
+        }
+
+        /* -----------------------------------------------------------
+         * 3. NICKNAME PETALS & FLOATING HEART BURST
+         * ----------------------------------------------------------- */
+        function triggerNicknameLove(event, nickname, message) {
+            const noteText = document.getElementById('nicknameNoteText');
+            noteText.style.opacity = '0';
+            setTimeout(() => {
+                noteText.textContent = message;
+                noteText.style.opacity = '1';
+            }, 150);
+
+            playPopChime(587.33);
+            spawnHeartBurst(event.clientX, event.clientY, 12);
+        }
+
+        function spawnHeartBurst(x, y, count = 14) {
+            const symbols = ['❤️', '💖', '✨', '🌹', '🐾', '👑'];
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement('span');
+                el.className = 'floating-burst text-lg sm:text-2xl select-none';
+                el.textContent = symbols[i % symbols.length];
+                el.style.left = `${x}px`;
+                el.style.top = `${y}px`;
+
+                const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.4;
+                const dist = 55 + Math.random() * 75;
+                el.style.setProperty('--tx', `${Math.cos(angle) * dist}px`);
+                el.style.setProperty('--ty', `${Math.sin(angle) * dist - 30}px`);
+                el.style.setProperty('--rot', `${(Math.random() - 0.5) * 60}deg`);
+
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 1150);
+            }
+        }
+
+        /* -----------------------------------------------------------
+         * 4. INTERACTIVE BALLOON POPPING SECTION
+         * ----------------------------------------------------------- */
+        const balloonData = [
+            {
+                label: 'My Queen',
+                color: 'from-[#f8e3b4] via-[#d4a64a] to-[#8c631e]',
+                textColor: 'text-[#2b141e]',
+                dialogue: '👑 "You carry a grace and warmth that makes you the true queen of my heart, DIA."'
+            },
+            {
+                label: 'Jantush',
+                color: 'from-[#f4b6c2] via-[#d96b84] to-[#8f2d45]',
+                textColor: 'text-white',
+                dialogue: '💖 "I love your adorable little smiles and the way you make my heart skip a beat, Jantush!"'
+            },
+            {
+                label: 'Shona',
+                color: 'from-[#fdf8f0] via-[#e6c27a] to-[#b88b3a]',
+                textColor: 'text-[#2b141e]',
+                dialogue: '✨ "You are the most precious blessing that ever walked into my life, Shona."'
+            },
+            {
+                label: 'Jaanu',
+                color: 'from-[#e899a8] via-[#b8435e] to-[#69192c]',
+                textColor: 'text-white',
+                dialogue: '🌹 "Every ordinary morning and unexpected evening becomes magical with you, Jaanu."'
+            },
+            {
+                label: 'Lokkhi',
+                color: 'from-[#f8e3b4] via-[#c99d49] to-[#785315]',
+                textColor: 'text-[#2b141e]',
+                dialogue: '🕊️ "I find so much peace in your voice and comfort in your presence, my Lokkhi."'
+            },
+            {
+                label: 'Babe',
+                color: 'from-[#f7cad0] via-[#c85a72] to-[#731c30]',
+                textColor: 'text-white',
+                dialogue: '💕 "I love your silly complaints, your endless stories, and every version of you, Babe."'
+            },
+            {
+                label: 'Kitty Love',
+                color: 'from-[#fff3d1] via-[#d4a64a] to-[#8c631e]',
+                textColor: 'text-[#2b141e]',
+                dialogue: '🐾 "Even the cutest kitties in the world can’t compete with how adorable you are, Dia!"'
+            },
+            {
+                label: 'Forever',
+                color: 'from-[#e899a8] via-[#9e2b47] to-[#520f20]',
+                textColor: 'text-white',
+                dialogue: '❤️ "If I had a thousand wishes today, I would spend them all wishing for your happiness."'
+            }
+        ];
+
+        let poppedCount = 0;
+
+        function renderBalloons() {
+            const grid = document.getElementById('balloonGrid');
+            grid.innerHTML = '';
+            poppedCount = 0;
+            document.getElementById('popCount').textContent = '0';
+            document.getElementById('totalBalloons').textContent = balloonData.length;
+
+            balloonData.forEach((item, idx) => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'flex flex-col items-center justify-center p-2';
+
+                const balloonBtn = document.createElement('button');
+                balloonBtn.className = `balloon-bob relative w-24 h-28 sm:w-28 sm:h-32 rounded-[50%_50%_50%_50%/45%_45%_55%_55%] bg-gradient-to-br ${item.color} shadow-xl border border-white/30 flex flex-col items-center justify-center cursor-pointer hover:scale-105 active:scale-90 transition-transform`;
+                balloonBtn.style.setProperty('--dur', `${3.4 + (idx % 3) * 0.6}s`);
+                balloonBtn.style.setProperty('--delay', `${(idx * 0.25) % 1.5}s`);
+
+                // Glossy Highlight Reflection
+                const shine = document.createElement('span');
+                shine.className = 'absolute top-3 left-4 w-3.5 h-7 rounded-full bg-white/45 -rotate-25 pointer-events-none';
+
+                const label = document.createElement('span');
+                label.className = `font-serif font-bold text-sm sm:text-base ${item.textColor} px-2 text-center drop-shadow-sm`;
+                label.textContent = item.label;
+
+                // Balloon Knot & String
+                const knot = document.createElement('span');
+                knot.className = 'w-3 h-2 bg-royal-gold rotate-45 -mt-1 block';
+
+                const stringLine = document.createElement('span');
+                stringLine.className = 'w-[1.5px] h-10 bg-royal-gold/50 block';
+
+                balloonBtn.appendChild(shine);
+                balloonBtn.appendChild(label);
+
+                balloonBtn.onclick = (e) => {
+                    if (balloonBtn.dataset.popped === 'true') return;
+                    balloonBtn.dataset.popped = 'true';
+
+                    poppedCount++;
+                    document.getElementById('popCount').textContent = poppedCount;
+                    playPopChime(520 + idx * 45);
+                    spawnHeartBurst(e.clientX, e.clientY, 16);
+
+                    // Update dialogue banner
+                    const bannerText = document.getElementById('balloonMessageText');
+                    bannerText.textContent = item.dialogue;
+
+                    // Replace balloon with popped heart badge
+                    wrapper.innerHTML = `
+                        <div class="w-24 h-28 sm:w-28 sm:h-32 rounded-2xl border border-royal-gold/30 bg-royal-bg/50 flex flex-col items-center justify-center p-2 text-center animate-fade-in">
+                            <span class="text-2xl mb-1">💖</span>
+                            <span class="text-xs sm:text-sm font-serif text-royal-goldLight font-semibold">${item.label}</span>
+                        </div>
+                    `;
+
+                    if (poppedCount === balloonData.length) {
+                        bannerText.textContent = '🎉 You popped every balloon, My Queen DIA! Now scroll down to blow your candles ("Fuu") & cut your chocolate cake!';
+                        launchConfettiBurst(80);
+                    }
+                };
+
+                wrapper.appendChild(balloonBtn);
+                wrapper.appendChild(knot);
+                wrapper.appendChild(stringLine);
+                grid.appendChild(wrapper);
+            });
+        }
+
+        function resetBalloons() {
+            document.getElementById('balloonMessageText').textContent = '🎈 Go ahead, Jantush — pop a balloon to reveal a piece of my heart!';
+            renderBalloons();
+        }
+
+        renderBalloons();
+
+        /* -----------------------------------------------------------
+         * 5. MICROPHONE "FUU" BLOW DETECTION + CANDLE BLOWING
+         *    + CHOCOLATE CAKE KNIFE SLICING CEREMONY
+         * ----------------------------------------------------------- */
+        let micStream = null;
+        let micAnalyser = null;
+        let micAnimationId = null;
+        let candlesBlown = false;
+        let cakeCut = false;
+
+        async function startMicBlowDetection() {
+            const statusText = document.getElementById('micStatusText');
+            const meterContainer = document.getElementById('micMeterContainer');
+
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                statusText.textContent = 'Microphone access is not supported in this browser—just tap "Tap to Blow Candles" below, Jaanu! 💨';
+                return;
+            }
+
+            try {
+                statusText.textContent = 'Requesting microphone permission...';
+                micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                const micCtx = new AudioContextClass();
+                const source = micCtx.createMediaStreamSource(micStream);
+                micAnalyser = micCtx.createAnalyser();
+                micAnalyser.fftSize = 256;
+                source.connect(micAnalyser);
+
+                meterContainer.classList.remove('hidden');
+                statusText.textContent = 'Mic active! Blow "Fuuuu 🌬️" gently toward your microphone!';
+
+                const bufferLength = micAnalyser.frequencyBinCount;
+                const dataArray = new Uint8Array(bufferLength);
+                let sustainedBlowFrames = 0;
+
+                function monitorBlow() {
+                    if (candlesBlown) return;
+                    micAnalyser.getByteFrequencyData(dataArray);
+
+                    // Low-frequency wind noise ("Fuu") concentrates in lower bins (0..25)
+                    let lowFreqSum = 0;
+                    for (let i = 0; i < 25; i++) {
+                        lowFreqSum += dataArray[i];
+                    }
+                    const avgWind = lowFreqSum / 25;
+                    const pct = Math.min(100, Math.round((avgWind / 135) * 100));
+
+                    document.getElementById('windMeterBar').style.width = `${pct}%`;
+                    document.getElementById('windPercent').textContent = `${pct}%`;
+
+                    if (avgWind > 72) {
+                        sustainedBlowFrames++;
+                        if (sustainedBlowFrames >= 6) {
+                            blowOutCandles();
+                            return;
+                        }
+                    } else {
+                        sustainedBlowFrames = Math.max(0, sustainedBlowFrames - 1);
+                    }
+
+                    micAnimationId = requestAnimationFrame(monitorBlow);
+                }
+
+                monitorBlow();
+            } catch (err) {
+                statusText.textContent = 'Mic permission declined or unavailable—no worries, Shona! Tap "Tap to Blow Candles" right next to it! 💨';
+            }
+        }
+
+        function stopMicStream() {
+            if (micAnimationId) cancelAnimationFrame(micAnimationId);
+            if (micStream) {
+                micStream.getTracks().forEach((track) => track.stop());
+                micStream = null;
+            }
+        }
+
+        function blowOutCandles() {
+            if (candlesBlown) return;
+            candlesBlown = true;
+            stopMicStream();
+
+            // Extinguish all candle flames and spawn rising smoke puffs
+            const flames = document.querySelectorAll('.candle-flame');
+            const smokeContainers = document.querySelectorAll('.smoke-container');
+
+            flames.forEach((flame) => flame.classList.add('blown-out'));
+
+            smokeContainers.forEach((container, idx) => {
+                for (let s = 0; s < 3; s++) {
+                    setTimeout(() => {
+                        const puff = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        puff.setAttribute('cx', (Math.random() - 0.5) * 6);
+                        puff.setAttribute('cy', '0');
+                        puff.setAttribute('r', '4');
+                        puff.setAttribute('fill', '#e2e8f0');
+                        puff.setAttribute('opacity', '0.75');
+                        puff.classList.add('smoke-puff');
+                        container.appendChild(puff);
+                        setTimeout(() => puff.remove(), 2200);
+                    }, s * 280 + idx * 60);
+                }
+            });
+
+            // Play celebratory chord & confetti
+            playPopChime(784);
+            launchConfettiBurst(110);
+
+            // Update UI Steps & Reveal Knife
+            document.getElementById('blowControls').classList.add('hidden');
+            document.getElementById('cutControls').classList.remove('hidden');
+
+            document.getElementById('stepBadge1').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif border border-royal-gold/40 text-royal-goldLight';
+            document.getElementById('stepBadge2').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif font-semibold bg-royal-gold text-royal-bg shadow';
+
+            document.getElementById('cakeInstructionSubtitle').innerHTML =
+                'Step 2: Your wish is sealed! Now tap <strong class="text-royal-gold">"Slice the Chocolate Cake"</strong> to cut your Belgian chocolate cake with the golden knife! 🔪🍫';
+
+            document.getElementById('catSpeechLeft').textContent = 'Yay!! Wish made! 🎉';
+            document.getElementById('catSpeechRight').textContent = 'Cut the cake, Dia! 🔪';
+
+            // Show the golden knife poised above the cake
+            const knife = document.getElementById('cakeKnifeGroup');
+            knife.classList.remove('hidden');
+        }
+
+        function animateCutCake() {
+            if (cakeCut) return;
+            cakeCut = true;
+
+            const knife = document.getElementById('cakeKnifeGroup');
+            const sliceWedge = document.getElementById('cakeSliceWedge');
+
+            // Step A: Knife plunges down into the top tier of the chocolate cake
+            knife.setAttribute('transform', 'translate(225, 138) rotate(-12)');
+            playPopChime(659.25);
+
+            // Step B: After knife cuts through, slide out the rich chocolate slice & pull knife back
+            setTimeout(() => {
+                sliceWedge.classList.add('cut-out');
+                knife.setAttribute('transform', 'translate(305, 110) rotate(-32)');
+                playPopChime(880);
+                launchConfettiBurst(140);
+
+                // Update Step Badges & Celebration Controls
+                document.getElementById('cutControls').classList.add('hidden');
+                document.getElementById('celebrateCakeControls').classList.remove('hidden');
+
+                document.getElementById('stepBadge2').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif border border-royal-gold/40 text-royal-goldLight';
+                document.getElementById('stepBadge3').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif font-semibold bg-royal-gold text-royal-bg shadow';
+
+                document.getElementById('cakeInstructionSubtitle').innerHTML =
+                    'Happy Birthday, <strong class="text-royal-gold">My Queen DIA!</strong> Enjoy your rich chocolate slice, my Lokkhi! 🍰❤️';
+
+                document.getElementById('catSpeechLeft').textContent = 'Happy Birthday Dia! ❤️';
+                document.getElementById('catSpeechRight').textContent = 'Purrrr~ So yummy! 🐾';
+            }, 750);
+        }
+
+        function resetCakeCeremony() {
+            candlesBlown = false;
+            cakeCut = false;
+            stopMicStream();
+
+            document.querySelectorAll('.candle-flame').forEach((f) => f.classList.remove('blown-out'));
+            document.getElementById('cakeSliceWedge').classList.remove('cut-out');
+
+            const knife = document.getElementById('cakeKnifeGroup');
+            knife.classList.add('hidden');
+            knife.setAttribute('transform', 'translate(285, 75) rotate(-28)');
+
+            document.getElementById('blowControls').classList.remove('hidden');
+            document.getElementById('cutControls').classList.add('hidden');
+            document.getElementById('celebrateCakeControls').classList.add('hidden');
+            document.getElementById('micMeterContainer').classList.add('hidden');
+            document.getElementById('micStatusText').textContent = '';
+
+            document.getElementById('stepBadge1').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif font-semibold bg-royal-gold text-royal-bg shadow';
+            document.getElementById('stepBadge2').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif border border-royal-gold/30 text-royal-cream/60';
+            document.getElementById('stepBadge3').className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-serif border border-royal-gold/30 text-royal-cream/60';
+
+            document.getElementById('cakeInstructionSubtitle').innerHTML =
+                'Step 1: Close your eyes, make a wish, and blow <strong class="text-royal-gold">"Fuu 🌬️"</strong> into your mic (or tap the button below) to blow out your candles!';
+        }
+
+        /* -----------------------------------------------------------
+         * 6. WAX-SEALED LOVE LETTER INTERACTION
+         * ----------------------------------------------------------- */
+        function openLoveLetter() {
+            const closedEnv = document.getElementById('closedEnvelope');
+            const openedLetter = document.getElementById('openedLetter');
+
+            closedEnv.classList.add('hidden');
+            openedLetter.classList.remove('hidden');
+
+            playPopChime(523.25);
+            setTimeout(() => playPopChime(659.25), 140);
+            setTimeout(() => playPopChime(783.99), 280);
+            launchConfettiBurst(100);
+
+            openedLetter.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function closeLoveLetter() {
+            document.getElementById('openedLetter').classList.add('hidden');
+            document.getElementById('closedEnvelope').classList.remove('hidden');
+        }
+
+        function launchGrandFinale() {
+            playPopChime(783.99);
+            setTimeout(() => playPopChime(987.77), 150);
+            setTimeout(() => playPopChime(1046.50), 300);
+            launchConfettiBurst(200);
+        }
+
+        /* -----------------------------------------------------------
+         * 7. AMBIENT GOLD DUST & CELEBRATION CONFETTI/HEARTS CANVAS
+         * ----------------------------------------------------------- */
+        const ambientCanvas = document.getElementById('ambientCanvas');
+        const ambientCtx = ambientCanvas.getContext('2d');
+        const celebCanvas = document.getElementById('celebrationCanvas');
+        const celebCtx = celebCanvas.getContext('2d');
+
+        let dustParticles = [];
+        let confettiParticles = [];
+
+        function resizeCanvases() {
+            ambientCanvas.width = window.innerWidth;
+            ambientCanvas.height = window.innerHeight;
+            celebCanvas.width = window.innerWidth;
+            celebCanvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvases);
+        resizeCanvases();
+
+        function initAmbientDust() {
+            const count = window.innerWidth < 640 ? 35 : 70;
+            dustParticles = Array.from({ length: count }, () => ({
+                x: Math.random() * ambientCanvas.width,
+                y: Math.random() * ambientCanvas.height,
+                r: 0.8 + Math.random() * 2.2,
+                vx: (Math.random() - 0.5) * 0.35,
+                vy: -0.15 - Math.random() * 0.4,
+                alpha: 0.25 + Math.random() * 0.65,
+                isRose: Math.random() > 0.72
+            }));
+        }
+        initAmbientDust();
+
+        function launchConfettiBurst(amount = 90) {
+            const colors = ['#e6c27a', '#f8e3b4', '#e899a8', '#c85a72', '#ffffff', '#ffd700'];
+            for (let i = 0; i < amount; i++) {
+                confettiParticles.push({
+                    x: celebCanvas.width * (0.2 + Math.random() * 0.6),
+                    y: celebCanvas.height * 0.45,
+                    vx: (Math.random() - 0.5) * 14,
+                    vy: -6 - Math.random() * 11,
+                    size: 5 + Math.random() * 6,
+                    color: colors[i % colors.length],
+                    rot: Math.random() * 360,
+                    vRot: (Math.random() - 0.5) * 12,
+                    gravity: 0.24,
+                    life: 1.0
+                });
+            }
+        }
+
+        function animateCanvases() {
+            // 1. Ambient Gold Dust
+            ambientCtx.clearRect(0, 0, ambientCanvas.width, ambientCanvas.height);
+            dustParticles.forEach((p) => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.y < -10) p.y = ambientCanvas.height + 10;
+                if (p.x < -10) p.x = ambientCanvas.width + 10;
+                if (p.x > ambientCanvas.width + 10) p.x = -10;
+
+                ambientCtx.beginPath();
+                ambientCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ambientCtx.fillStyle = p.isRose
+                    ? `rgba(232, 153, 168, ${p.alpha})`
+                    : `rgba(248, 227, 180, ${p.alpha})`;
+                ambientCtx.fill();
+            });
+
+            // 2. Celebration Confetti
+            celebCtx.clearRect(0, 0, celebCanvas.width, celebCanvas.height);
+            confettiParticles = confettiParticles.filter((c) => c.life > 0.02);
+            confettiParticles.forEach((c) => {
+                c.x += c.vx;
+                c.y += c.vy;
+                c.vy += c.gravity;
+                c.vx *= 0.985;
+                c.rot += c.vRot;
+                c.life -= 0.0085;
+
+                celebCtx.save();
+                celebCtx.translate(c.x, c.y);
+                celebCtx.rotate((c.rot * Math.PI) / 180);
+                celebCtx.globalAlpha = Math.max(0, c.life);
+                celebCtx.fillStyle = c.color;
+                celebCtx.fillRect(-c.size / 2, -c.size / 2, c.size, c.size * 0.65);
+                celebCtx.restore();
+            });
+
+            requestAnimationFrame(animateCanvases);
+        }
+
+        window.onload = function () {
+            animateCanvases();
+        };
+    </script>
+</body>
+</html>
+```
